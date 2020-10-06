@@ -1,12 +1,12 @@
 import React from "react";
 import BookRow from "./BookRow";
 
-const AuthorDetail = props => {
+const AuthorDetail = (props) => {
   const author = props.author;
   const authorName = `${author.first_name} ${author.last_name}`;
 
-  const books = author.books.map(book => (
-    <BookRow book={book} key={book.title} authorName={authorName} />
+  const books = author.books.map((book) => (
+    <BookRow book={book} key={book.title} />
   ));
 
   return (
